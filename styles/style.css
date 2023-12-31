@@ -21,6 +21,14 @@ body {
   justify-content: center;
   flex-direction: column; /* Adjust to column layout */
 }
+
+.main h2 {
+  font-size: 6rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  user-select: none;
+  line-height: 0.8;
+}
 .main span {
   font-size: 4rem;
 }
@@ -38,18 +46,16 @@ body {
 }
 /* MAKE TEXT CENTERED IN SCREEN 
  BUTTONS IN THE BOTTOM OF THE SCREEN*/
-.main h2 {
-  position: relative;
-  font-size: 6rem;
-  letter-spacing: 1rem;
-  text-transform: uppercase;
-  user-select: none;
-  line-height: 0.7;
-}
+
 #particles-js {
-  position: absolute;
   width: 100%;
   height: 100%;
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
@@ -88,7 +94,7 @@ body {
   color: #333;
   border: 2px solid #333;
   text-transform: uppercase;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
@@ -98,7 +104,7 @@ body {
   transform: scale(1.1);
 }
 
-.buttons {
+.buttons {  
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -108,7 +114,6 @@ body {
   align-items: center;
   text-align: center;
   width: 100%;
-
   }
 
 img {
@@ -119,6 +124,14 @@ img {
 }
 
 /* Main CSS */
+.grid-wrapper {
+  overflow: hidden;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
 .grid-wrapper > div {
   opacity: 0; /* Initially set opacity to 0 */
   display: flex;
@@ -137,15 +150,7 @@ img {
   opacity: 1;
   transform: translateY(0);
 }
-.grid-wrapper {
-  overflow: hidden;
 
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-auto-rows: 200px;
-  grid-auto-flow: dense;
-}
 .grid-wrapper .wide {
   grid-column: span 2;
 }
@@ -161,14 +166,15 @@ section {
 }
 .about {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   text-align: start;
 }
 .about h1 {
   z-index: 1;
-  padding: 10px;
+  padding-bottom: 2vh;
+  padding-top: 8vh;
   background-color: #fff;
   position: relative;
   font-size: 2rem;
@@ -180,12 +186,15 @@ section {
   max-width: 60vw;
   text-align: start; /* Adjust the max-width as needed */
   margin: 0 auto;
-  word-spacing: 0.5vw;
+  line-height: 1.7;
+  word-spacing: 0.3em;
+}
+.aboutText span {
+  font-weight: 600;
 }
 
 .moesImage {
-  width: 40%;
-  height: 40%;
+  width: 35%;
   float: left; /* Float the image to the left */
   margin-right: 2vw;
 }
@@ -245,4 +254,69 @@ li:hover {
 }
 .socials h2 {
   margin: 50px;
+}
+.worked-with-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+  
+}
+.worked-with-grid .company-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.worked-with-grid .worked-with-company {
+  border: 2px solid #333;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 25%;
+  padding: 20px;
+} 
+.company-card{
+  text-align: center;
+}
+.worked-with-grid .worked-with-company img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: contrast(1);
+  border-radius: 5px;
+}
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .main h2 {
+    font-size: 3.5rem;
+    letter-spacing: 0.5rem;
+    line-height: 0.9;
+  }
+  .main span {
+    font-size: 3rem;
+  }
+  .main .buttons {
+    flex-direction: column;
+  }
+  
+  .main .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 1vh;
+    height: 6vh;
+    font-size: 1.5rem;
+  }
+  .main .button:hover {
+    transform: scale(1.05);
+  }
+  /* TODO:
+    - Make the grid more fitting for mobile, reduce image size and make it 2 columns
+    - Make the about section more fitting for mobile, make image above text and reduce text size, increase image size
+    - Make the contact a column layout
+    - Change font sizes to rem
+      */
 }
