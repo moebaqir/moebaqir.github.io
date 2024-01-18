@@ -11,6 +11,9 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+.ISMOBILE{
+  display: none;
+}
 .main {
   min-height: 100vh;
   width: 100%;
@@ -125,11 +128,11 @@ img {
 
 /* Main CSS */
 .grid-wrapper {
+  padding: 0 1vw;
   overflow: hidden;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-auto-rows: 200px;
   grid-auto-flow: dense;
 }
 .grid-wrapper > div {
@@ -308,6 +311,22 @@ li:hover {
 }
 /* Media Queries */
 @media only screen and (max-width: 600px) {
+  .ISMOBILE{
+    
+    /* show on screen at all times */
+    display: flex;
+    display: none;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    color: rgba(255, 0, 0, 0.195);
+    background-color: rgba(0, 0, 0, 0.244);
+z-index: 99999;
+  }
   .main h2 {
     font-size: 3.5rem;
     letter-spacing: 0.5rem;
@@ -332,10 +351,36 @@ li:hover {
   .main .button:hover {
     transform: scale(1.05);
   }
+  .grid-wrapper{
+    padding: 0 10px;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  }
+ 
+  
+  .aboutContainer {
+    max-width: 85vw;
+    font-size: small;
+    word-spacing: 0.25em;
+  }
+  .moesImage {
+    width: 100%;
+    float: none; /* Float the image to the left */
+    margin-right: 0;
+  }
+  
+  .animation-container {
+    text-align: start;
+  }
+  
+.socials {
+  flex-direction: column;
+}
+
+
   /* TODO:
-    - Make the grid more fitting for mobile, reduce image size and make it 2 columns
-    - Make the about section more fitting for mobile, make image above text and reduce text size, increase image size
-    - Make the contact a column layout
+    - Make the grid more fitting for mobile, reduce image size and make it 2 columns / done
+    - Make the about section more fitting for mobile, make image above text and reduce text size, increase image size / done
+    - Make the contact a column layout / done
     - Change font sizes to rem
       */
 }
