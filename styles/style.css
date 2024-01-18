@@ -11,7 +11,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
-.ISMOBILE{
+.ISMOBILE {
   display: none;
 }
 .main {
@@ -107,7 +107,7 @@ body {
   transform: scale(1.1);
 }
 
-.buttons {  
+.buttons {
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -117,7 +117,7 @@ body {
   align-items: center;
   text-align: center;
   width: 100%;
-  }
+}
 
 img {
   max-width: 100%;
@@ -264,7 +264,7 @@ li:hover {
   align-items: center;
   flex-direction: column;
 }
-.worked-with h1{
+.worked-with h1 {
   z-index: 1;
   padding-bottom: 5vh;
   background-color: #fff;
@@ -294,11 +294,9 @@ li:hover {
   border-radius: 25%;
   padding: 20px;
   display: flex;
+}
 
-
-  } 
-
-.company-card{
+.company-card {
   text-align: center;
 }
 .worked-with-grid .worked-with-company img {
@@ -307,15 +305,12 @@ li:hover {
   object-fit: contain;
   filter: contrast(1);
   border-radius: 5px;
-  
 }
 /* Media Queries */
-@media only screen and (max-width: 600px) {
-  .ISMOBILE{
-    
+@media only screen and (max-width: 	1080px) {
+  .ISMOBILE {
     /* show on screen at all times */
     display: flex;
-    display: none;
     align-self: center;
     align-items: center;
     justify-content: center;
@@ -325,12 +320,12 @@ li:hover {
     text-align: center;
     color: rgba(255, 0, 0, 0.195);
     background-color: rgba(0, 0, 0, 0.244);
-z-index: 99999;
+    z-index: 99999;
   }
   .main h2 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     letter-spacing: 0.5rem;
-    line-height: 0.9;
+    line-height: 1;
   }
   .main span {
     font-size: 3rem;
@@ -338,44 +333,47 @@ z-index: 99999;
   .main .buttons {
     flex-direction: column;
   }
-  
+
   .main .button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 85%;
     margin: 1vh;
     height: 6vh;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .main .button:hover {
     transform: scale(1.05);
   }
-  .grid-wrapper{
-    padding: 0 10px;
-  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  .gallery-text {
+    font-size: 2rem;
+    letter-spacing: .3rem;
   }
- 
-  
+  .grid-wrapper {
+    padding: 0 10px;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  }
+
   .aboutContainer {
     max-width: 85vw;
-    font-size: small;
+    font-size: 1rem;
     word-spacing: 0.25em;
   }
   .moesImage {
     width: 100%;
     float: none; /* Float the image to the left */
     margin-right: 0;
+    padding-bottom: 5vh;
   }
-  
+
   .animation-container {
     text-align: start;
   }
-  
-.socials {
-  flex-direction: column;
-}
 
+  .socials {
+    flex-direction: column;
+  }
 
   /* TODO:
     - Make the grid more fitting for mobile, reduce image size and make it 2 columns / done
