@@ -240,7 +240,7 @@ li a {
 }
 li {
   cursor: pointer;
-  margin: 0 10px;
+  margin: 0 3vw;
   list-style: none;
   display: inline-block;
   color: #292929;
@@ -248,7 +248,7 @@ li {
   border-radius: 50%;
   font-size: 1.5rem;
   transition: 0.5s;
-  padding: 10px 20px;
+  padding: 1vh 4vw;
 }
 li:hover {
   color: rgb(15, 15, 144);
@@ -256,7 +256,7 @@ li:hover {
   transition: 0.5s;
 }
 .socials h2 {
-  margin: 50px;
+  margin: 0 1vw;
 }
 .worked-with {
   display: flex;
@@ -308,8 +308,7 @@ li:hover {
 }
 /* Media Queries */
 @media only screen and (max-width: 	1080px) {
-  .ISMOBILE {
-    /* show on screen at all times */
+  /* .ISMOBILE {
     display: flex;
     align-self: center;
     align-items: center;
@@ -321,17 +320,19 @@ li:hover {
     color: rgba(255, 0, 0, 0.195);
     background-color: rgba(0, 0, 0, 0.244);
     z-index: 99999;
-  }
+  } */
   .main h2 {
-    font-size: 2.5rem;
+    margin-top: 10vh;
     letter-spacing: 0.5rem;
     line-height: 1;
   }
   .main span {
-    font-size: 3rem;
+    font-size: 8rem;
   }
   .main .buttons {
+      position: relative;
     flex-direction: column;
+    margin-top: 15vh;
   }
 
   .main .button {
@@ -339,26 +340,19 @@ li:hover {
     justify-content: center;
     align-items: center;
     width: 85%;
-    margin: 1vh;
+    margin: 1.5vh 0;
     height: 6vh;
-    font-size: 1.2rem;
+    font-size: 3rem;
   }
-  .main .button:hover {
-    transform: scale(1.05);
-  }
-  .gallery-text {
-    font-size: 2rem;
-    letter-spacing: .3rem;
+  .gallery-text{
+    font-size: 6rem;
   }
   .grid-wrapper {
-    padding: 0 10px;
-    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    padding: 0 2.5vw;
+    grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
   }
-
-  .aboutContainer {
-    max-width: 85vw;
-    font-size: 1rem;
-    word-spacing: 0.25em;
+  .about h1 {
+    font-size: 6rem;
   }
   .moesImage {
     width: 100%;
@@ -366,15 +360,26 @@ li:hover {
     margin-right: 0;
     padding-bottom: 5vh;
   }
+  .aboutContainer {
+    max-width: 85vw;
+    font-size: 1.5rem;
+    word-spacing: 0.25em;
+  }
 
   .animation-container {
     text-align: start;
   }
 
   .socials {
+    font-size: 3rem;
     flex-direction: column;
   }
-
+  .socials h2 {
+    margin: 5vh 0;
+  }
+  li {
+    font-size: 4rem;
+  }
   /* TODO:
     - Make the grid more fitting for mobile, reduce image size and make it 2 columns / done
     - Make the about section more fitting for mobile, make image above text and reduce text size, increase image size / done
